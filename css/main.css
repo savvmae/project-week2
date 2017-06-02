@@ -1,0 +1,297 @@
+/**********************
+Home
+***********************/
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'PT Sans', cursive, sans-serif;
+  margin: 0px;
+  color: #0B1942;
+}
+a {
+  display: block;
+  cursor: pointer;
+}
+.nav-bar-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.logo {
+  background: #F5005B;
+  width:33vw;
+  padding: 9px;
+}
+.logo img{
+  width: 100%;
+  height: 100%;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  text-align: center;
+}
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+.home {
+  background: #00A5BF;
+  height: 34%;
+}
+.calendar {
+  background: #00B7D3;
+  height: 33%;
+}
+.join {
+  background: #00D5E7;
+  height: 33%;
+}
+.blank-space {
+  background: #7CDFE6;
+  color: white;
+  text-align: center;
+}
+.content-header {
+  background: #0B1942;
+  color: white;
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: lighter;
+  margin: 10px 20px;
+}
+main h2 {
+  font-weight: lighter;
+  margin: 10px 20px;
+  font-size: 24px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+main p {
+  margin: 10px 20px;
+  font-size: 12px;
+  font-weight: lighter;
+}
+.up-next-section {
+  background: #0B1942;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.up-next-section h1 {
+  color: white;
+  font-weight: lighter;
+  margin-left: 20px;
+}
+.up-next-feature {
+  background: #E2E2E2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  padding-top: 20px;
+}
+.bigger-poster {
+  width: 50vw;
+  height: 40vh;
+}
+.poster {
+  width: 40vw;
+  height: 30vh;
+}
+hr {
+  border-color: gray;
+}
+.up-next-feature div {
+  padding-left: 8px;
+  padding: 10px;
+  font-size: smaller;
+}
+.movie-title-link {
+  color: #00D5E7;
+  padding-bottom: 10px;
+  font-size: 7vw;
+}
+.smaller {
+  font-size: 3.7vw;
+  padding-bottom: 0px;
+}
+div ul {
+  list-style: circle;
+  padding-left: 25px;
+}
+.up-next-not-f {
+  margin-top: -1px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #0B1942;
+  padding: 30px 10px;
+}
+.up-next-grid-item {
+  flex: 0 1 50%;
+  background: #E2E2E2;
+  padding: 10px;
+  margin: -1px;
+}
+.up-next-grid-item span {
+  font-size: 3.8vw;
+}
+.blank-space p {
+  margin: 0px;
+}
+.footer-cr {
+  height: 10vh;
+  line-height: 10vh;
+}
+
+@media (min-width:545px)  {
+  .nav-bar {
+    flex-direction: row;
+  }
+  .nav-bar a {
+    padding-top: 15%;
+  }
+  .nav-bar-wrapper {
+    height: 20vh;
+  }
+  .home, .calendar, .join {
+    width: 20%;
+    height: 100%;
+  }
+  .blank-space {
+    width: 40%;
+  }
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+  main h2 {
+    flex: 0 1 100%;
+    margin-top: 15px;
+  }
+  .main-content-container {
+    flex-basis: calc(33% - 10px);
+    margin: 5px;
+  }
+  .up-next-not-f {
+    flex-wrap: nowrap;
+    max-width: 100vw;
+  }
+  .up-next-grid-item {
+    flex: 0 1 25%;
+  }
+  .poster {
+    height: 25vh;
+    width: 20vw;
+  }
+  .bigger-poster {
+    height: 40vh;
+    width: 40vw;
+  }
+  .up-next-feature {
+    justify-content: space-around;
+  }
+  .up-next-feature div {
+    font-size: 1.5em;
+  }
+  .smaller, .up-next-grid-item span {
+    font-size: 2.1vh;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+  }
+  #footer-nav-item {
+    width: 33.4%;
+    padding-top: 12%;
+  }
+  .footer-cr {
+    height: auto;
+    width: 100%;
+  }
+}
+@media (min-width:769px) {
+  .nav-bar-wrapper {
+    height: 12vh;
+  }
+  .logo {
+    width: 8vw;
+  }
+  .nav-bar {
+    flex-direction: row;
+  }
+  .home, .calendar, .join, .blank-space{
+    height: 100%;
+  }
+  .blank-space {
+    width: 60%;
+    height: 100%;
+  }
+  .home, .calendar, .join {
+    width: 13.5%;
+  }
+  .nav-bar a {
+    padding-top: 3%;
+  }
+  .up-next-wrapper {
+    display: flex;
+  }
+  .up-next-section {
+    width: 50%;
+  }
+  .up-next-not-f {
+    width: 50%;
+    flex-wrap: wrap;
+    padding-top: 98px;
+    margin-top: 0px;
+  }
+  .up-next-feature {
+    height: 50vh;
+  }
+  .bigger-poster {
+    width: 25vw;
+    height: 45vh;
+  }
+  .movie-title-link {
+    font-size: 3vh;
+  }
+  .up-next-feature div {
+    font-size: 1em;
+  }
+  .up-next-grid-item{
+    flex: 0 1 50%;
+  }
+  .poster {
+    height: 35vh;
+  }
+  .footer-nav-item {
+    width: 150%;
+  }
+  #footer-nav-item {
+    padding-top: 6%;
+  }
+}
+/**********************
+About
+***********************/
+h4 {
+  margin: 0px;
+  padding-left: 10px;
+}
+.flex-1 {
+  display: flex;
+  flex-direction: column;
+}
+.flex-1 img {
+  width: 90%;
+  margin: auto;
+  border-radius: 50%;
+}
+.file-btn {
+
+}
