@@ -16,20 +16,20 @@
       <div class="nav-bar">
         <a class="home"href="../index.html">Home</a>
         <a class="calendar" href="../calendar/index.html">Calendar</a>
-        <a class="join" href="./join/index.html">Join</a>
+        <a class="join" href="./index.html">Join</a>
         <div class='blank-space'>
         </div>
       </div>
     </div>
     <main>
-      <h2> Join Film Club</h2>
+      <h1> Join Film Club</h1>
       <form>
-        <div class="flex-1">
-          <label>profile picture</label>
+        <div class="flex-1 flex-2">
+          <label class="padding-10">profile picture</label>
           <input type="file" accept="images/*" name="pic"/>
           <img src="../images/profile-placeholder.png" alt="profile picture placeholder">
         </div>
-        <div class="flex-1">
+        <div class="flex-1 flex-3">
             <div class="input-container">
             <label for="name">name</label>
               <input type="text" name="name" id="name">
@@ -51,7 +51,7 @@
           <h4> What genres are you interested in?</h4>
           <div>
           <input type="checkbox" name="genre" value="action" id="action">
-          <label for='action'>action</label></div>
+          <label for='action'>action</label></div><span></span>
           <div>
           <input type="checkbox" name="genre" value="adventure" id="adventure">
           <label for='adventure'>adventure</label></div>
@@ -85,18 +85,18 @@
         </div>
         <div class="input-container larger-input">
         <label for="additional-input">Additional Input</label>
-          <input type="text" name="additional-input" id="additional-input">
+          <textarea rows="4" type="text" name="additional-input" id="additional-input"></textarea>
         </div>
-        <div class="sign-up-button file-btn">
-            <span>Join Film Club</span>
-          <input type="submit" class="submit">
+        <div>
+          <input type="submit" value="Join Film Club"class="submit">
         </div>
       </form>
+    </main>
     <footer>
       <div class="nav-bar">
         <a class="home" id="footer-nav-item"href="../index.html">Home</a>
         <a class="calendar" id="footer-nav-item" href="../calendar/index.html">Calendar</a>
-        <a class="join" id="footer-nav-item" href="./join/index.html">Join</a>
+        <a class="join" id="footer-nav-item" href="./index.html">Join</a>
       </div>
       <div class="blank-space footer-cr footer-nav-item">
         <p>&copy 2017, Film Club</p>

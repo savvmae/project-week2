@@ -16,15 +16,16 @@ a {
 .nav-bar-wrapper {
   display: flex;
   flex-direction: row;
+  height: 100px;
 }
 .logo {
   background: #F5005B;
-  width:33vw;
+  width:100px;
   padding: 9px;
 }
 .logo img{
   width: 100%;
-  height: 100%;
+  height: 85px;
 }
 .nav-bar {
   display: flex;
@@ -35,7 +36,8 @@ a {
 .nav-bar a {
   color: white;
   text-decoration: none;
-  padding: 5px;
+  text-align: center;
+  line-height: 33px;
 }
 .home {
   background: #00A5BF;
@@ -67,7 +69,12 @@ main h2 {
   margin: 10px 20px;
   font-size: 24px;
 }
-main {
+main h1 {
+  margin-left: 10px;
+  font-weight: lighter;
+  font-size: 26px;
+}
+.flex-basic {
   display: flex;
   flex-direction: column;
 }
@@ -96,12 +103,12 @@ main p {
   padding-top: 20px;
 }
 .bigger-poster {
-  width: 50vw;
-  height: 40vh;
+  width: 50%;
+  height: 50%;
 }
 .poster {
-  width: 40vw;
-  height: 30vh;
+  width: 100%;
+  height: 80%;
 }
 hr {
   border-color: gray;
@@ -144,28 +151,33 @@ div ul {
   margin: 0px;
 }
 .footer-cr {
-  height: 10vh;
-  line-height: 10vh;
+  height: 50px;
+  line-height: 50px;
+}
+footer {
+  height: 100px;
+  line-height: 100px;
 }
 
 @media (min-width:545px)  {
   .nav-bar {
     flex-direction: row;
   }
-  .nav-bar a {
-    padding-top: 15%;
-  }
   .nav-bar-wrapper {
-    height: 20vh;
+    height: 100px;
+  }
+  .nav-bar a {
+    line-height: 100px;
   }
   .home, .calendar, .join {
     width: 20%;
     height: 100%;
+    font-size: 16px;
   }
   .blank-space {
     width: 40%;
   }
-  main {
+  .flex-wrap-row {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 5px;
@@ -181,17 +193,10 @@ div ul {
   .up-next-not-f {
     flex-wrap: nowrap;
     max-width: 100vw;
+    padding: 30px 5px 30px 10px;
   }
   .up-next-grid-item {
     flex: 0 1 25%;
-  }
-  .poster {
-    height: 25vh;
-    width: 20vw;
-  }
-  .bigger-poster {
-    height: 40vh;
-    width: 40vw;
   }
   .up-next-feature {
     justify-content: space-around;
@@ -208,20 +213,14 @@ div ul {
   }
   #footer-nav-item {
     width: 33.4%;
-    padding-top: 12%;
   }
   .footer-cr {
-    height: auto;
     width: 100%;
+    height: 100px;
+    line-height: 100px;
   }
 }
 @media (min-width:769px) {
-  .nav-bar-wrapper {
-    height: 12vh;
-  }
-  .logo {
-    width: 8vw;
-  }
   .nav-bar {
     flex-direction: row;
   }
@@ -235,8 +234,16 @@ div ul {
   .home, .calendar, .join {
     width: 13.5%;
   }
-  .nav-bar a {
-    padding-top: 3%;
+  .main-content-container p {
+    font-size: 1em;
+  }
+  .content-header {
+    font-size: 1.75em;
+    padding: 5px 10px;
+  }
+  main h2 {
+    font-size: 1.75em;
+    padding-left: 10px;
   }
   .up-next-wrapper {
     display: flex;
@@ -247,41 +254,45 @@ div ul {
   .up-next-not-f {
     width: 50%;
     flex-wrap: wrap;
-    padding-top: 98px;
+    padding-top: 117px;
     margin-top: 0px;
   }
   .up-next-feature {
-    height: 50vh;
+    height: 40%;
   }
   .bigger-poster {
-    width: 25vw;
-    height: 45vh;
+    width: 60%;
+    height: 100%;
   }
   .movie-title-link {
     font-size: 3vh;
   }
   .up-next-feature div {
-    font-size: 1em;
+    font-size: .75em;
   }
   .up-next-grid-item{
     flex: 0 1 50%;
+    font-size: .5em;
   }
-  .poster {
-    height: 35vh;
+  .smaller {
+    font-size: 1.75em;
   }
   .footer-nav-item {
     width: 150%;
-  }
-  #footer-nav-item {
-    padding-top: 6%;
   }
 }
 /**********************
 About
 ***********************/
-h4 {
-  margin: 0px;
+body {
+  font-size: 12px;
+}
+.padding-10 {
   padding-left: 10px;
+}
+
+.checkbox h4 {
+  font-weight: lighter;
 }
 .flex-1 {
   display: flex;
@@ -292,6 +303,185 @@ h4 {
   margin: auto;
   border-radius: 50%;
 }
-.file-btn {
+textarea, input[type=text], input[type=email], input[type=password] {
+  border: .5px solid lightgray;
+  width: calc(100% - 20px);
+  line-height: 1.5em;
+}
+input[type=file] {
+  margin-left: 10px;
+}
+textarea {
+  width: 80%;
+  height: 75px;
+  border: .5px solid black;
+}
+.checkbox {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
 
+.input-container {
+  margin: 10px;
+}
+.join-button {
+  margin: 10px;
+}
+.checkbox div {
+  padding: 10px 0px;
+}
+.larger-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit {
+  background-color: #F6005B;
+  height: 50px;
+  width: 150px;;
+  line-height: 50px;
+  color: white;
+  border-style: none;
+  border-radius: 2px;
+  font-size: 14px;
+  margin: 25px 10px;
+  font-weight: lighter;
+}
+@media (min-width:545px) {
+  body {
+    font-size: 16px;
+  }
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .flex-1 {
+    width: 50%;
+  }
+  .checkbox {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .checkbox h4 {
+    flex-basis: 100%;
+  }
+  .checkbox div {
+    width: 50%;
+  }
+  .larger-input {
+    width: 100%;
+  }
+  input[type=email] {
+    margin-bottom: 100px;
+  }
+  main h1 {
+    font-size: 26px;
+    margin-left: 10px;
+    font-weight: lighter;
+  }
+
+}
+@media (min-width:769px) {
+  body {
+    font-size: 20px;
+  }
+  main h1 {
+    font-size: 36px;
+  }
+  .flex-2 {
+    width: 34%;
+  }
+  .flex-3 {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .input-container {
+    width: 50%;
+    margin: 0px;
+  }
+  input[type=email] {
+    margin-bottom: 10px;
+  }
+  .checkbox div {
+    width: 33%;
+  }
+  .larger-input {
+    width: 100%;
+    margin-left: 10px;
+  }
+  .submit {
+    font-size: 18px;
+  }
+}
+/***********************
+calendar
+***********************/
+.blue-background {
+  background-color: #0B1942;
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.blue-background h1 {
+  padding-top: 20px;
+}
+.divTable{
+	display: table;
+	width: 100%;
+  padding-bottom: 50px;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableCell {
+	border: 1px solid #0B1942;
+	display: table-cell;
+  background-color: white;
+  position: relative;
+  height: 55px;
+}
+.divTableBody {
+	display: table-row-group;
+}
+.blank-date {
+  background-color: #0B1942;
+}
+.date {
+  background-color: #0B1942;
+  color: white;
+  height: 30px;
+  width: 25px;
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: .5em;
+  text-align: center;
+  line-height: 30px;
+}
+.pink-date {
+  background-color: #F5005B;
+}
+@media (min-width:545px) {
+  .divTableCell {
+    height: 100px;
+  }
+  .blue-background h1 {
+    font-size: 2em;
+  }
+}
+@media (min-width:769px) {
+  .divTableCell{
+    height: 150px;
+  }
+  .date {
+    height: 35px;
+    width: 30px;
+    font-size: .75em;
+  }
 }
